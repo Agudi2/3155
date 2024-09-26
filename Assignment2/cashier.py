@@ -10,10 +10,11 @@ class Cashier:
         dimes = int(input("how many dimes?: ")) * 0.10
         nickels = int(input("how many nickels?: ")) * 0.05
         pennies = int(input("how many pennies?: ")) * 0.01
-        return quarters + dimes + nickels + pennies
+        payment = quarters + dimes + nickels + pennies
+        return payment
 
 
-    def transaction_result(self, coins, cost):
+    def transaction_result(self, payment, cost):
         """Return True when the payment is accepted, or False if money is insufficient.
            Hint: use the output of process_coins() function for cost input"""
         if payment >= cost:
